@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# datasets and generated labels (redistribution is not allowed for these corpora)
+Dataset/*/Audio_16k/
+Dataset/*/labels_sess/
+Dataset/IEMOCAP/metalabel.json
+Dataset/IEMOCAP/conversations_orders.json
+
+# experiment outputs
+results/
+*.ckpt
+
+
+LICENSE
