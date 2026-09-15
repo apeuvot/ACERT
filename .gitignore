@@ -10,6 +10,3 @@ Dataset/IEMOCAP/conversations_orders.json
 # experiment outputs
 results/
 *.ckpt
-
-
-LICENSE
