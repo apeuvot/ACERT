@@ -70,16 +70,21 @@ parser.add_argument('--context_direction', type=str, choices=['past', 'past_and_
                          "results); 'past_and_future' splits the budget evenly before and "
                          "after the target.")
 parser.add_argument('--context_source', type=str,
-                    choices=['recent', 'distant_same_session', 'distant_scattered_session'],
+                    choices=['recent', 'shuffled_same_conversation',
+                             'distant_same_session', 'distant_scattered_session'],
                     default='recent',
-                    help="'recent' = the seconds preceding the target (default). "
+                    help="Where the context audio comes from. 'recent' = the seconds "
+                         "preceding the target (default). The other three are the ablation "
+                         "conditions. 'shuffled_same_conversation' = exactly the utterances "
+                         "'recent' would use, concatenated in a random order: same "
+                         "conversation and same audio, no chronology. "
                          "'distant_same_session' = a window taken from the end of ANOTHER "
                          "conversation of the same IEMOCAP session (same two speakers, same "
                          "recording conditions, no conversational continuity). "
                          "'distant_scattered_session' = the budget filled with utterances "
                          "drawn at random from the session's other conversations. The two "
-                         "distant modes are the ablation studies of the paper and are only "
-                         "available for IEMOCAP in speaker-independent mode.")
+                         "distant modes are only available for IEMOCAP in speaker-independent "
+                         "mode; the shuffled one works on every corpus.")
 parser.add_argument('--context_speaker_dependent', action='store_true',
                     help="IEMOCAP only: restrict the context to the utterances of the same "
                          "speaker as the target. Without --speaker_diarization_file the "

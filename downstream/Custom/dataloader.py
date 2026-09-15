@@ -448,6 +448,15 @@ class _CustomEmoContextDataset(data.Dataset):
             future_segments.append(wav)
             future_len += len(wav)
 
+        # The utterances are the ones the target would normally get, only their
+        # order is permuted: same speakers, same conversation, same audio, no
+        # chronology. Seeded on the filename so the permutation is fixed across
+        # epochs and reproducible from one run to the next.
+        if self.context_source == "shuffled_same_conversation":
+            rng = random.Random(fname)
+            rng.shuffle(past_segments)
+            rng.shuffle(future_segments)
+
         # ---------------------------------------------
         # Assemble
         # ---------------------------------------------
