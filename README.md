@@ -2,6 +2,7 @@
 
 Official implementation of **Enriching Speech Emotion Representations with
 Conversational Context** (submitted to ICASSP 2027).
+Preprint: [arXiv:2609.26422](https://arxiv.org/abs/2609.26422).
 
 ACERT (Averaged Contextual Emotion Representation through Time) enriches the frame-level
 representation of a target utterance with the conversation that precedes it: the context
@@ -103,16 +104,17 @@ supported by the ANR-23-PEIA0008 SHARP project in the context of the France 2030
 If you use this code, or build on ACERT in your own work, please cite the paper:
 
 ```bibtex
-@inproceedings{peuvot2027acert,
-  title     = {Enriching Speech Emotion Representations with Conversational Context},
-  author    = {Peuvot, Arthur and Besan\c{c}on, Romaric and de Chalendar, Ga\"el and
-               Vieru, Bianca and Vasilescu, Ioana},
-  booktitle = {},
-  year      = {2027},
-  pages     = {},
-  doi       = {},
+@misc{peuvot2026acert,
+  title         = {Enriching Speech Emotion Representations with Conversational Context},
+  author        = {Peuvot, Arthur and Besan\c{c}on, Romaric and de Chalendar, Ga\"el and
+                   Vieru, Bianca and Vasilescu, Ioana},
+  year          = {2026},
+  eprint        = {2609.26422},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2609.26422},
 }
 ```
 
-The empty fields will be filled once the paper is published. A preprint reference will be
-added here as soon as one is available.
+This entry points to the preprint and will be replaced by the conference reference once
+the paper is published.
